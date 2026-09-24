@@ -3,7 +3,6 @@ from pygame.locals import *
 import random
         
 class Window:
-    """ application window object """
     def __init__(self):
 
         self.width = 800
@@ -112,7 +111,7 @@ class CarGame:
 
 class Player:
     def __init__(self):
-        self.car = pygame.image.load("assets/car.png")
+        self.car = pygame.image.load("img/car.png")
         self.location = self.car.get_rect()
         self.location.center = window.right_lane, window.height*0.8
 
@@ -120,7 +119,7 @@ class EnemyVehicle:
     def __init__(self):
         self.speed = 1
         self.length = 250
-        self.img_path = "assets/otherCar.png"
+        self.img_path = "img/otherCar.png"
         self.draw_car()
         
     def draw_car(self):
